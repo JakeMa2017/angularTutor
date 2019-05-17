@@ -1,0 +1,87 @@
+<div class="container mb-0">
+  <div class="row">
+  <div class="col-2"></div>
+    <div class="col-8">
+      <h1 class="text-center title">Build-A-Dish!</h1>
+    </div>
+    <div class="col-2"></div>
+  </div><!--row-->
+</div><!--container-->
+
+<div class="container mainStage mt-0">
+  <div class="row mt-0">
+    <div class="col-3">
+      <table class="table table-hover table-borderless text-center">
+        <th scope="col">Meat</th>
+        <tr>
+          <td class="">Chicken</td>
+          <td><button class="btn" type="button" (click)="meat[0].checked=!meat[0].checked;mySet.add(meat[0].name)" [ngClass]="meat[0].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Beef</td>
+          <td><button class="btn" type="button" (click)="meat[1].checked=!meat[1].checked;add()" [ngClass]="meat[1].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Pork</td>
+          <td><button class="btn" type="button" (click)="meat[2].checked=!meat[2].checked;mySet.add(meat[2].name)" [ngClass]="meat[2].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Lamb</td>
+          <td><button class="btn" type="button" (click)="meat[3].checked=!meat[3].checked;mySet.add(meat[3].name)" [ngClass]="meat[3].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-3">
+      <table class="table table-hover table-borderless text-center">
+        <th scope="col">Vegetable</th>
+        <tr>
+          <td>Broccoli</td>
+          <td><button class="btn" type="button" (click)="veggie[0].checked=!veggie[0].checked;add()" [ngClass]="veggie[0].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Coriander</td>
+          <td><button class="btn" type="button" (click)="veggie[1].checked=!veggie[1].checked;mySet.add(veggie[1].name)" [ngClass]="veggie[1].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Peanuts</td>
+          <td><button class="btn" type="button" (click)="veggie[2].checked=!veggie[2].checked;mySet.add(veggie[2].name)" [ngClass]="veggie[2].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Green Onion</td>
+          <td><button class="btn" type="button" (click)="veggie[3].checked=!veggie[3].checked;mySet.add(veggie[3].name)" [ngClass]="veggie[3].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Cumin</td>
+          <td><button class="btn" type="button" (click)="veggie[4].checked=!veggie[4].checked;mySet.add(veggie[4].name)" [ngClass]="veggie[4].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+        <tr>
+          <td>Red Pepper</td>
+          <td><button class="btn" type="button" (click)="veggie[5].checked=!veggie[5].checked;mySet.add(veggie[5].name)" [ngClass]="veggie[5].checked ? 'btn-success' : 'btn-outline-success'">Add</button></td>
+        </tr>
+
+      </table>
+    </div>
+    <div class="col-6 goButtons">
+      <button class="btn btn-primary" type="submit" (click)="ifWorks()">Submit</button>
+      <button class="btn btn-danger" type="submit" (click)="reset()">Reset</button>
+    </div>
+  </div><!--row-->
+
+  <div class="row">
+    <div class="col-12">
+      <div class="displayArea">
+        <div *ngFor="let m of meat" class="selection">
+            <div *ngIf="m.checked"><span> {{ m.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        </div>
+        <div *ngFor="let v of veggie" class="selection">
+          <div *ngIf="v.checked"><span> {{ v.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        </div>
+        <div class="pt-5">
+          <div *ngIf="clicked" [ngClass]="isADish ? 'succeed' : 'failure'"><span> {{ goodOrNot }}<br></span><span class="dishName">{{ dishName }}</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div><!--row-->
+
+</div><!--container-->

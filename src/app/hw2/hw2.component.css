@@ -1,0 +1,73 @@
+.title {
+  font-size: 100px;
+  font-family: Baloo Bhai;
+  margin-top: 10%;
+}
+
+.showBorder {
+  border: blueviolet 3px solid;
+}
+
+.mainStage {
+  padding-top: 3%;
+}
+
+.displayArea {
+
+  text-align: center;
+  padding-top: 5%;
+  margin-top: 5%;
+  font-size: 25px;
+
+}
+.success {
+  color: green;
+}
+.danger {
+  color: red;
+}
+
+.goButtons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.goButtons button {
+  height: 75px;
+  width: 150px;
+  border-radius: 50px;
+}
+
+.selection {
+  display: inline-block;
+}
+
+.table, div{
+  font-family: Montserrat;
+}
+
+
+.table th{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.table td {
+  font-size: 25px;
+}
+
+.succeed {
+  font-size: 45px;
+  font-family: 'Mogra', cursive;
+}
+
+.failure {
+  font-size: 45px;
+  font-family: 'Stylish', sans-serif;
+}
+.dishName {
+  font-family: 'Baloo Bhai', cursive;
+  font-weight: bold;
+}
+
